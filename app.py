@@ -72,7 +72,8 @@ def index():
                           "Comment": custComment}
                 reviews.append(mydict)
             
-	    client = pymongo.MongoClient("mongodb+srv://comfazil:Fazil#123@cluster0.e3evv8d.mongodb.net/?retryWrites=true&w=majority")
+	    
+            client = pymongo.MongoClient("mongodb+srv://comfazil:Fazil#123@cluster0.e3evv8d.mongodb.net/?retryWrites=true&w=majority")
             db = client['review_scrap']
             review_col = db['review_scrap_data']
             review_col.insert_many(reviews)
